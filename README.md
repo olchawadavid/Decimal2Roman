@@ -1,5 +1,6 @@
 # Konwerter liczb rzymskich i arabskich
 
+Program wykonano na zaliczenie zadania na studiach.
 Prosty program konsolowy napisany w **C++**, który umożliwia konwersję liczb:
 
 - z systemu **arabskiego na rzymski**

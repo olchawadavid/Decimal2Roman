@@ -1,4 +1,5 @@
 build_win/
+build_mac/
 build_linux/
 .vscode/
 *.exe

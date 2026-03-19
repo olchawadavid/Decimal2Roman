@@ -5,7 +5,7 @@ Prosty program konsolowy w C++, który umożliwia konwersję:
 - z liczb rzymskich na arabskie
 - z liczb arabskich na rzymskie
 
-Program działa w trybie tekstowym i udostępnia menu wyboru po uruchomieniu. Obsługa obu kierunków konwersji jest zrealizowana w osobnych funkcjach, a w projekcie znajdują się też proste testy jednostkowe. :contentReference[oaicite:1]{index=1} :contentReference[oaicite:2]{index=2} :contentReference[oaicite:3]{index=3}
+Program działa w trybie tekstowym i udostępnia menu wyboru po uruchomieniu. Obsługa obu kierunków konwersji jest zrealizowana w osobnych funkcjach, a w projekcie znajdują się też proste testy jednostkowe. 
 
 ---
 

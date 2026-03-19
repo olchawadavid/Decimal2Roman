@@ -1,69 +1,74 @@
 # Konwerter liczb rzymskich i arabskich
 
-Prosty program konsolowy w C++, który umożliwia konwersję:
+Prosty program konsolowy napisany w **C++**, który umożliwia konwersję liczb:
 
-- z liczb rzymskich na arabskie
-- z liczb arabskich na rzymskie
+- z systemu **arabskiego na rzymski**
+- z systemu **rzymskiego na arabski**
 
-Program działa w trybie tekstowym i udostępnia menu wyboru po uruchomieniu. Obsługa obu kierunków konwersji jest zrealizowana w osobnych funkcjach, a w projekcie znajdują się też proste testy jednostkowe. 
+Projekt został przygotowany jako aplikacja uruchamiana w terminalu, z prostym menu wyboru oraz funkcjami realizującymi oba kierunki konwersji.
 
 ---
 
-## Funkcje programu
+## Funkcjonalności
 
-Po uruchomieniu program wyświetla menu:
+Program pozwala na:
+
+- konwersję liczby arabskiej na rzymską
+- konwersję liczby rzymskiej na arabską
+- obsługę programu przez menu tekstowe
+- uruchamianie prostych testów funkcji konwertujących
+
+---
+
+## Jak działa program
+
+Po uruchomieniu użytkownik wybiera jedną z opcji:
 
 1. Rzymska do Arabskiej  
 2. Arabska do Rzymskiej  
 3. Zakończ  
 
-Użytkownik wybiera opcję, wpisuje wartość i otrzymuje wynik konwersji. :contentReference[oaicite:4]{index=4}
+Następnie wpisuje wartość, a program zwraca wynik konwersji.
 
 ---
 
-## Jak działa
+## Technologie
 
-### Arabska → Rzymska
-Konwersja z liczby arabskiej do rzymskiej odbywa się przez przechodzenie po kolejnych wartościach:
+Projekt wykorzystuje:
 
-`1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1`
-
-i dopisywanie odpowiadających im symboli rzymskich do wyniku. :contentReference[oaicite:5]{index=5}
-
-### Rzymska → Arabska
-Konwersja z liczby rzymskiej do arabskiej działa przez sprawdzanie, czy napis zaczyna się od danego symbolu rzymskiego, a następnie dodanie jego wartości i usunięcie tego fragmentu z początku tekstu. :contentReference[oaicite:6]{index=6}
-
----
-
-## Testy
-
-W projekcie znajdują się przykładowe testy:
-
-- `Decimal2RomanUnitTest()` – sprawdza podstawową poprawność konwersji
-- `Chain_UnitTest(...)` – wykonuje testy losowe, sprawdzając czy konwersja:
-  
-  liczba arabska → liczba rzymska → liczba arabska
-  
-  daje z powrotem tę samą wartość. :contentReference[oaicite:7]{index=7} :contentReference[oaicite:8]{index=8}
+- **C++17**
+- **CMake**
+- standardowe biblioteki języka C++
 
 ---
 
 ## Wymagania
 
-- kompilator C++ z obsługą **C++17**
-- **CMake 3.6.2** lub nowszy :contentReference[oaicite:9]{index=9}
+Aby zbudować projekt, potrzebujesz:
+
+- kompilatora C++ obsługującego **C++17**
+- **CMake 3.6.2** lub nowszego
+
+Przykładowe kompilatory:
+
+- **Windows**: MSVC (Visual Studio)
+- **Linux**: g++
+- **macOS**: clang++
 
 ---
 
 ## Struktura projektu
 
-Obecny `CMakeLists.txt` zakłada taką strukturę katalogów:
+Przykładowa struktura projektu:
 
 ```text
-projekt/
+Decimal2Roman/
 ├── CMakeLists.txt
+├── include/
+│   └── converter.h
 ├── src/
-│   ├── main.cpp
-│   └── converter.cpp
-└── include/
-    └── converter.h
+│   ├── converter.cpp
+│   └── main.cpp
+├── build_win/
+├── build_linux/
+└── build_mac/
